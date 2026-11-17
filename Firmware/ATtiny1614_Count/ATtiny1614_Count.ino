@@ -267,7 +267,7 @@ void countPixels() {
 // ---- Button callbacks ----
 
 void ShortPress(void* oneButton) {
-  if (++mode > 7) {
+  if (++mode > 8) {
     mode = 0;
   }
 }
@@ -317,9 +317,10 @@ void loop() {
     case 2: setAllColor(255, 0, 0); mode_str = "Red"; break;
     case 3: setAllColor(0, 255, 0); mode_str = "Green"; break;
     case 4: setAllColor(0, 0, 255); mode_str = "Blue"; break;
-    case 5: setAllColor(127, 127, 127); mode_str = "50% White"; break;
-    case 6: setAllColor(255, 255, 255); mode_str = "100% White"; break;
-    case 7: setAllColor(0, 0, 0); mode_str = "Off"; break;
+    case 5: setAllColor(255, 255, 0); mode_str = "Yellow"; break;
+    case 6: setAllColor(127, 127, 127); mode_str = "50% White"; break;
+    case 7: setAllColor(255, 255, 255); mode_str = "100% White"; break;
+    case 8: setAllColor(0, 0, 0); mode_str = "Off"; break;
   }
 
   delay(10);
