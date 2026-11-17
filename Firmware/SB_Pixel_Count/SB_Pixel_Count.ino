@@ -183,14 +183,18 @@ void loop() {
       mode_str ="Blue";
       break;
     case 5:
+      set_color(strip.Color(255,255,0));    // Yellow
+      mode_str ="Yellow";
+      break;
+    case 6:
       set_color(strip.Color(127,127,127));    // 50% White
       mode_str ="50% White";
       break;
-    case 6:
+    case 7:
       set_color(strip.Color(255,255,255));    // 100% White
       mode_str ="100% White";
       break;
-    case 7:
+    case 8:
       set_color(strip.Color(0,0,0));    // black
       mode_str ="Off";
       break;
@@ -215,7 +219,7 @@ void ShortPress(void *oneButton)
   }
 #endif
   // Advance to next test mode, wrap around after 6
-  if(++mode > 7) {
+  if(++mode > 8) {
     mode = 0;
   }
 }
